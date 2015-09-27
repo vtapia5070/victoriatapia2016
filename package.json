@@ -13,5 +13,20 @@
     "jade": "~1.11.0",
     "morgan": "~1.6.1",
     "serve-favicon": "~2.3.0"
-  }
+  },
+  "description": "blog",
+  "main": "index.js",
+  "devDependencies": {
+    "bower": "^1.5.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vtapia5070/victoriatapia.git"
+  },
+  "author": "Victoria Tapia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vtapia5070/victoriatapia/issues"
+  },
+  "homepage": "https://github.com/vtapia5070/victoriatapia#readme"
 }

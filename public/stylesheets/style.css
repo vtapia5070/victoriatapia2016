@@ -15,11 +15,11 @@ body {
 }
 
 .border {
-   background: margin: 25px 0;
-    height: 1px;
-    border: 0;
-    background: black;
-    background: -webkit-gradient(linear, 0 0, 100% 0, from(white), to(white), color-stop(50%, black));
+  background: margin: 25px 0;
+  height: 1px;
+  border: 0;
+  background: black;
+  background: -webkit-gradient(linear, 0 0, 100% 0, from(white), to(white), color-stop(50%, black));
 }
 
 #avatar {
@@ -31,9 +31,24 @@ body {
   -webkit-border-radius: 150px;
   -moz-border-radius: 150px;
 }
+
 #left p {
  text-align: center;
  font-size: 15px;
-
 }
+
+#right {
+  border: 3px solid;
+  float: right;
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 600px;
+  padding: 10px;
+}
+/*
+.info li:hoover {
+  background-color: 
+}
+*/
+
 

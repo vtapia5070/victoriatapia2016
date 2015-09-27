@@ -1,0 +1,20 @@
+{
+  "name": "victoriatapia",
+  "version": "0.0.0",
+  "homepage": "https://github.com/vtapia5070/victoriatapia",
+  "authors": [
+    "Victoria <tapia.victoria5070@gmail.com>"
+  ],
+  "description": "blog",
+  "main": "index.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.6"
+  }
+}

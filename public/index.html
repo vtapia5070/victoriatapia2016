@@ -3,21 +3,31 @@
 <head>
   <title>My Blog</title>
 </head>
-<body>
+<body ng-app="blogApp">
   <link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
-  <div class="static" id="left">
+  <script src="/bower_components/angular/angular.js"></script>
+
+  <div class="static" id="left" ng-controller="contactController">
     <img id="avatar" src="/images/avatar.png" />
     <p> Software Engineer </p>
     <p> Hack Reactor Student </p>
     <div class="border"></div>
-    <p class="contact">Contact</p>
+    <p class="contact" ng-click="toggleContact()">Contact</p>
+      <ul class="info" ng-if="contact">
+        <li><a href="https://github.com/vtapia5070">GitHub</a></li>
+        <li><a href="https://twitter.com/vee_tapia">Twitter</a></li>
+      </ul>
     <div class="border"></div>
-    <p></p>
+  </div>
+  <div class="static" id="right">
+    <div class="date">
+      <h3>Saturday, September 26, 2015</h3>
+    </div>
+    <div class="post">
+      Some really long and boring post goes here.
+    </div>
+  </div>
 
-  </div>
-  <div class="nav">
-    
-  </div>
-  <div class="static" id="right"></div>
+  <script type="text/javascript" src="/javascripts/app.js"></script>
 </body>
 </html>
