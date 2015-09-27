@@ -8,10 +8,16 @@
 
   <div class="static" id="left" ng-controller="contactController">
     <img id="avatar" src="/images/avatar.png" />
-    <p> Software Engineer </p>
-    <p> Hack Reactor Student </p>
+    <p> Victoria Tapia </p>
     <hr class="border" />
-    <p class="contact" ng-click="toggleContact()">Email Me</p>
+    <p class="aboutMe" ng-click="toggleContact(1)">About Me</p>
+    <div ng-if="bio">
+      <p> Software Engineer </p>
+      <p> Hack Reactor Student </p>
+      <p> Sunnyvale, CA </p>
+    </div>
+    <hr class="border" />
+    <p class="contact" ng-click="toggleContact(2)">Email Me</p>
     <div ng-if="contact">
       <form ng-submit="sendPost">
         <input type="text" placeholder="your email" required />

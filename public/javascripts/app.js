@@ -2,12 +2,21 @@ angular.module("blogApp", ['post.services'])
 
   .controller('contactController', ['$scope', function ($scope) {
     $scope.contact = false;
-    $scope.toggleContact = function () {
+    $scope.bio = false;
+    $scope.toggleContact = function (num) {
       console.log("contact has been clicked!");
-      if ($scope.contact) {
-        $scope.contact = false;
-      } else {
-        $scope.contact = true;
+      if (num === 2) {
+        if ($scope.contact) {
+          $scope.contact = false;
+        } else {
+          $scope.contact = true;
+        }
+      } else if (num === 1) {
+        if ($scope.bio) {
+          $scope.bio = false;
+        } else {
+          $scope.bio = true;
+        }
       }
     };
   }])
