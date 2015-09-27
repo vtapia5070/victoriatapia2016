@@ -38,6 +38,39 @@ body {
  color: #6f6f61;
 }
 
+.i1 {
+  margin-left: 35%;
+}
+.i2 {
+  margin-left: 8%;
+}
+
+.contact:hover,
+div p:hover {
+  background-color: #d4d4cd;
+}
+
+.contact {
+  padding: 6px;
+  font-size: 10px;
+}
+
+input {
+  height: 30px;
+  width: 80%;
+  margin-bottom: 15px;
+  margin-left: 10px;
+  padding-left: 10px;
+}
+
+textarea {
+  width: 80%;
+  padding: 10px;
+  height: 70px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
 #right {
   float: right;
   margin-left: 5%;
@@ -46,6 +79,7 @@ body {
   padding: 10px;
   color: #6f6f61;
 }
+
 #right h3 {
   text-align: center;
 }
@@ -53,11 +87,8 @@ body {
 .post {
   padding: 10px;
   margin-bottom: 30px;
+  font-size: 14px;
 }
-/*
-.info li:hoover {
-  background-color: 
-}
-*/
+
 
 

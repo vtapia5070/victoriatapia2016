@@ -1,9 +1,9 @@
-angular.module("blogApp", [])
+angular.module("blogApp", ['post.services'])
 
   .controller('contactController', ['$scope', function ($scope) {
-    $scope.test = "hello";
     $scope.contact = false;
     $scope.toggleContact = function () {
+      console.log("contact has been clicked!");
       if ($scope.contact) {
         $scope.contact = false;
       } else {
@@ -12,7 +12,11 @@ angular.module("blogApp", [])
     };
   }])
 
-  // .controller('postController', ['$scope', function ($scope) {
-
-
-  // }])
+  .controller('postController', ['$scope', 'handleRequest', function ($scope, handleRequest) {
+    $scope.init = function () {
+      console.log("Post controller initialized");
+      handleRequest.getPost();
+      //console.log("called get request");
+    }
+    $scope.init();
+  }])

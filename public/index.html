@@ -5,31 +5,42 @@
 </head>
 <body ng-app="blogApp">
   <link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
-  <script src="/bower_components/angular/angular.js"></script>
 
   <div class="static" id="left" ng-controller="contactController">
     <img id="avatar" src="/images/avatar.png" />
     <p> Software Engineer </p>
     <p> Hack Reactor Student </p>
-    <div class="border"></div>
-    <p class="contact" ng-click="toggleContact()">Contact</p>
-      <ul class="info" ng-if="contact">
-        <li><a href="https://github.com/vtapia5070">GitHub</a></li>
-        <li><a href="https://twitter.com/vee_tapia">Twitter</a></li>
-      </ul>
-    <div class="border"></div>
+    <hr class="border" />
+    <p class="contact" ng-click="toggleContact()">Email Me</p>
+    <div ng-if="contact">
+      <form ng-submit="sendPost">
+        <input type="text" placeholder="your email" required />
+        <textarea type"text" placeholder="Type your message here." required></textarea>
+        <div>
+          <button class="btn" ng-disabled="form.$invalid && form.$dirty" type="submit">Send</button>
+        </div>
+      </form>
+    </div>
+    <hr class="border" />
+    <div class="icons">
+      <a class="i1" href="https://github.com/vtapia5070"><img src="/images/github.png" height="23" width="23"/></a>
+      <a class="i2" href="https://github.com/vtapia5070"><img src="/images/twitter.png" height="23" width="23"/></a>
+    </div>
   </div>
-  <div class="static" id="right">
-   <div class="border"></div>
+
+  <div class="static" id="right" ng-controller="postController">
+   <hr class="border" />
       <div class="date">
         <h3>Saturday, September 26, 2015</h3>
       </div>
       <div class="post">
         Some really long and boring post goes here.
       </div>
-    <div class="border"></div>
+    <hr class="border" />
   </div>
 
+  <script src="/bower_components/angular/angular.min.js"></script>
   <script type="text/javascript" src="/javascripts/app.js"></script>
+  <script type="text/javascript" src="/javascripts/services.js"></script>
 </body>
 </html>
