@@ -1,0 +1,39 @@
+body {
+  background-color: #dfdfc2;
+  height: 100%;
+  font-family: "Trebuchet MS", Verdana, sans-serif;
+}
+
+#left {
+  position:fixed;
+  padding: 10px;
+  top: 0;
+  left: 0;
+  height:100%;
+  width:200px;
+  background: #fff;
+}
+
+.border {
+   background: margin: 25px 0;
+    height: 1px;
+    border: 0;
+    background: black;
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(white), to(white), color-stop(50%, black));
+}
+
+#avatar {
+  height: 115px;
+  width: 115px;
+  margin-left: 20%;
+  margin-top: 20%;
+  border-radius: 150px;
+  -webkit-border-radius: 150px;
+  -moz-border-radius: 150px;
+}
+#left p {
+ text-align: center;
+ font-size: 15px;
+
+}
+
