@@ -19,7 +19,7 @@ body {
   height: 1px;
   border: 0;
   background: black;
-  background: -webkit-gradient(linear, 0 0, 100% 0, from(white), to(white), color-stop(50%, black));
+  background: -webkit-gradient(linear, 0 0, 100% 0, from(#dfdfc2), to(#dfdfc2), color-stop(50%, #6f6f61));
 }
 
 #avatar {
@@ -35,15 +35,24 @@ body {
 #left p {
  text-align: center;
  font-size: 15px;
+ color: #6f6f61;
 }
 
 #right {
-  border: 3px solid;
   float: right;
   margin-left: 5%;
   margin-right: 5%;
   width: 600px;
   padding: 10px;
+  color: #6f6f61;
+}
+#right h3 {
+  text-align: center;
+}
+
+.post {
+  padding: 10px;
+  margin-bottom: 30px;
 }
 /*
 .info li:hoover {
