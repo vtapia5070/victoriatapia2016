@@ -19,9 +19,10 @@
     <hr class="border" />
     <p class="contact" ng-click="toggleContact(2)">Email Me</p>
     <div ng-if="contact">
-      <form ng-submit="sendPost">
-        <input type="text" placeholder="your email" required />
-        <textarea type"text" placeholder="Type your message here." required></textarea>
+      <form ng-submit="sendPost()">
+        <input type="text" placeholder="name" ng-model="info.name" required />
+        <input type="text" placeholder="email" ng-model="info.email" required />
+        <textarea type"text" placeholder="Type your message here." ng-model="info.text" required></textarea>
         <div>
           <button class="btn" ng-disabled="form.$invalid && form.$dirty" type="submit">Send</button>
         </div>
@@ -37,10 +38,10 @@
   <div class="static" id="right" ng-controller="postController">
    <hr class="border" />
       <div class="date">
-        <h3>Saturday, September 26, 2015</h3>
+        <h3></h3>
       </div>
       <div class="post">
-        Some really long and boring post goes here.
+        No posts yet. Check back later!
       </div>
     <hr class="border" />
   </div>

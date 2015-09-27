@@ -1,6 +1,6 @@
 angular.module("blogApp", ['post.services'])
 
-  .controller('contactController', ['$scope', function ($scope) {
+  .controller('contactController', ['$scope', 'handleRequest', function ($scope, handleRequest) {
     $scope.contact = false;
     $scope.bio = false;
     $scope.toggleContact = function (num) {
@@ -9,16 +9,29 @@ angular.module("blogApp", ['post.services'])
         if ($scope.contact) {
           $scope.contact = false;
         } else {
+          $scope.bio = false;
           $scope.contact = true;
         }
       } else if (num === 1) {
         if ($scope.bio) {
           $scope.bio = false;
         } else {
+          $scope.contact = false;
           $scope.bio = true;
         }
       }
     };
+
+    $scope.info = {
+      name:'',
+      email: '',
+      text: ''
+    };
+
+    $scope.sendPost = function() {
+      console.log("sendPost has been called");
+      handleRequest.sendPost($scope.info);
+    }
   }])
 
   .controller('postController', ['$scope', 'handleRequest', function ($scope, handleRequest) {

@@ -10,4 +10,15 @@ angular.module('post.services', [])
         console.log("error is", err);
       }) 
   };
+
+  this.sendPost = function (data) {
+    console.log("inside sending post to server");
+    $http.post('/post', data)
+    .then(function (result) {
+      console.log("response is ", result);
+    }, function (err) {
+      console.log("err from postRequest is", err);
+    })
+
+  }
 }])
