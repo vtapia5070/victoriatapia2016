@@ -1,44 +1,47 @@
-angular.module("blogApp", ['post.services'])
-
-  .controller('contactController', ['$scope', 'handleRequest', function ($scope, handleRequest) {
-    $scope.contact = false;
-    $scope.bio = false;
-    $scope.toggleContact = function (num) {
-      console.log("contact has been clicked!");
-      if (num === 2) {
-        if ($scope.contact) {
-          $scope.contact = false;
-        } else {
-          $scope.bio = false;
-          $scope.contact = true;
-        }
-      } else if (num === 1) {
-        if ($scope.bio) {
-          $scope.bio = false;
-        } else {
-          $scope.contact = false;
-          $scope.bio = true;
-        }
-      }
-    };
-
-    $scope.info = {
-      name:'',
-      email: '',
-      text: ''
-    };
-
-    $scope.sendPost = function() {
-      console.log("sendPost has been called");
-      handleRequest.sendPost($scope.info);
-    }
-  }])
+angular.module("blogApp", ['post.services', 'ui.bootstrap'])
 
   .controller('postController', ['$scope', 'handleRequest', function ($scope, handleRequest) {
     $scope.init = function () {
       console.log("Post controller initialized");
       handleRequest.getPost();
-      //console.log("called get request");
     }
     $scope.init();
+  }])
+
+  .controller('contactController', ['$scope', 'handleRequest', '$modal', '$log', function ($scope, handleRequest, $modal, $log) {
+    $scope.contact = false;
+    $scope.bio = false;
+    $scope.animationsEnabled = true;
+    $scope.info = {
+      name:'',
+      email: '',
+      text: ''
+    };
+    
+    $scope.showForm = function (size) {
+      $scope.message = "Show Form Button Clicked";
+      console.log($scope.message);
+      var modalInstance = $modal.open({
+        templateUrl: 'templates/emailForm.html',
+        scope: $scope,
+        size: size,
+        controller: function($scope, $modalInstance, handleRequest) {
+          $scope.ok = function () { 
+            console.log($scope.info);
+            $modalInstance.close($scope.info);
+          };
+          $scope.cancel = function () { $modalInstance.dismiss('cancel'); };
+        },
+      });
+      modalInstance.result.then(function (user) {
+        $scope.user = user;
+        console.log(user);
+        console.log("sendPost has been called");
+        handleRequest.sendPost($scope.info);
+        },
+      function () {
+        $log.info('Modal dismissed at: ' + new Date());
+      });
+    };
+
   }])

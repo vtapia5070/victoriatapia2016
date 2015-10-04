@@ -2,32 +2,23 @@
 <html>
 <head>
   <title>My Blog</title>
+  <link rel="stylesheet" type="text/css" href="bower_components/bootstrap-css/css/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
 </head>
 <body ng-app="blogApp">
-  <link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
-
   <div class="static" id="left" ng-controller="contactController">
     <img id="avatar" src="/images/avatar.png" />
     <p> Victoria Tapia </p>
     <hr class="border" />
-    <p class="aboutMe" ng-click="toggleContact(1)">About Me</p>
+    <p class="contact" ng-click="bio ? bio = false : bio = true">About Me</p>
     <div ng-if="bio">
       <p> Software Engineer </p>
       <p> Hack Reactor Student </p>
       <p> Sunnyvale, CA </p>
     </div>
     <hr class="border" />
-    <p class="contact" ng-click="toggleContact(2)">Email Me</p>
-    <div ng-if="contact">
-      <form ng-submit="sendPost()">
-        <input type="text" placeholder="name" ng-model="info.name" required />
-        <input type="text" placeholder="email" ng-model="info.email" required />
-        <textarea type"text" placeholder="Type your message here." ng-model="info.text" required></textarea>
-        <div>
-          <button class="btn" ng-disabled="form.$invalid && form.$dirty" type="submit">Send</button>
-        </div>
-      </form>
-    </div>
+    <p class="contact" data-ng-click="showForm('lg')">Email Me</p>
+    <!--ng-click adds contact template here -->
     <hr class="border" />
     <div class="icons">
       <a class="i1" href="https://github.com/vtapia5070"><img src="/images/github.png" height="23" width="23"/></a>
@@ -46,7 +37,8 @@
     <hr class="border" />
   </div>
 
-  <script src="/bower_components/angular/angular.min.js"></script>
+  <script src="/bower_components/angular/angular.js"></script>
+  <script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
   <script type="text/javascript" src="/javascripts/app.js"></script>
   <script type="text/javascript" src="/javascripts/services.js"></script>
 </body>

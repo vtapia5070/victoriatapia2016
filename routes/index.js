@@ -31,6 +31,7 @@ router.post('/post', function(req, res, next) {
   console.log("this is the email format", mailOptions);
   smtpTransport.sendMail(mailOptions, function(error, response){
     if(error){
+      console.log("error is:", error);
       res.end("error: message not sent");
     }else{
       console.log("Message sent: " + response.message);
