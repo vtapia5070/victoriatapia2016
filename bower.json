@@ -17,6 +17,7 @@
   "dependencies": {
     "angular": "~1.4.6",
     "angular-bootstrap": "~0.13.4",
-    "bootstrap-css": "~3.3.4"
+    "bootstrap-css": "~3.3.4",
+    "angular-ui-codemirror": "~0.3.0"
   }
 }

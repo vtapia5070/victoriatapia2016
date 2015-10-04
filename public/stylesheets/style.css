@@ -1,59 +1,76 @@
 body {
   background-color: #dfdfc2;
+  width: 100%;
   height: 100%;
   font-family: "Trebuchet MS", Verdana, sans-serif;
 }
 
 #left {
   position:fixed;
-  padding: 10px;
+  padding: 2%;
   top: 0;
   left: 0;
   height:100%;
-  width:200px;
+  width: 25%;
   background: #fff;
   border-right-style: inset;
+  margin-right: 10%;
 }
 
 .border {
-  background: margin: 25px 0;
+  /*background: */
+  margin: 20px 0;
   height: 1px;
   border: 0;
   background: black;
   background: -webkit-gradient(linear, 0 0, 100% 0, from(#dfdfc2), to(#dfdfc2), color-stop(50%, #6f6f61));
 }
 
+.avatar-box {
+  height: auto;
+  width: auto;
+  border: 1px solid #DDD;
+  text-align: center;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+
 #avatar {
-  height: 115px;
-  width: 115px;
-  margin-left: 20%;
-  margin-top: 20%;
-  border-radius: 150px;
-  -webkit-border-radius: 150px;
-  -moz-border-radius: 150px;
+  padding: 3%;
+  max-width: 100%;
+  max-height: 80%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
 }
 
 #left p {
  text-align: center;
- font-size: 15px;
+ font-size: 110%;
  color: #6f6f61;
 }
 
-.i1 {
-  margin-left: 35%;
-}
-.i2 {
-  margin-left: 8%;
+p.name {
+  padding-top: 20px;
 }
 
-.contact:hover,
-div p:hover {
+.icons {
+  padding: 5%;
+  text-align: center;
+}
+
+.icons a{
+  padding: 5%;
+}
+
+.contact:hover {
   background-color: #d4d4cd;
 }
 
 .contact {
-  padding: 6px;
-  font-size: 10px;
+  padding: 3%;
+  font-size: 100%;
 }
 
 input {
@@ -67,16 +84,16 @@ input {
 textarea {
   width: 80%;
   padding: 10px;
-  height: 70px;
+  height: 100px;
   margin-left: 10px;
   margin-bottom: 10px;
 }
 
 #right {
   float: right;
-  margin-left: 5%;
+  margin-left: 10%;
   margin-right: 5%;
-  width: 600px;
+  width: 65%;
   padding: 10px;
   color: #6f6f61;
 }
@@ -89,10 +106,6 @@ textarea {
   padding: 10px;
   margin-bottom: 30px;
   font-size: 14px;
-}
-
-.modal {
-  display: block;
 }
 
 

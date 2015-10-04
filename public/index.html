@@ -2,13 +2,18 @@
 <html>
 <head>
   <title>My Blog</title>
-  <link rel="stylesheet" type="text/css" href="bower_components/bootstrap-css/css/bootstrap.css" />
+  <!-- <link rel="stylesheet" type="text/css" href="bower_components/codemirror/lib/codemirror.css"> -->
+  <link rel="stylesheet" type="text/css" href="lib/bootstrap.css" />
   <link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta name="HandheldFriendly" content="true">
 </head>
 <body ng-app="blogApp">
   <div class="static" id="left" ng-controller="contactController">
-    <img id="avatar" src="/images/avatar.png" />
-    <p> Victoria Tapia </p>
+    <div class="avatar-box">
+      <img id="avatar" src="/images/avatar.png" />
+    </div>
+    <p class="name"> Victoria Tapia </p>
     <hr class="border" />
     <p class="contact" ng-click="bio ? bio = false : bio = true">About Me</p>
     <div ng-if="bio">
@@ -17,7 +22,7 @@
       <p> Sunnyvale, CA </p>
     </div>
     <hr class="border" />
-    <p class="contact" data-ng-click="showForm('lg')">Email Me</p>
+    <p class="contact" data-ng-click="showForm('lg')">Contact</p>
     <!--ng-click adds contact template here -->
     <hr class="border" />
     <div class="icons">
@@ -27,19 +32,23 @@
   </div>
 
   <div class="static" id="right" ng-controller="postController">
+    <div ng-repeat="posts in postTemplates"></div>
    <hr class="border" />
       <div class="date">
-        <h3></h3>
+        <h3 class="time">October 4, 2015</h3>
       </div>
       <div class="post">
-        No posts yet. Check back later!
+        <h4>Hello World!</h4>
+        <p> Welcome to my blog. More posts (hopefully insightful and amusing) will be up soon. Until then I hope you enjoy looking at it! 
+        - (created by yours truly :D ) <p>
       </div>
     <hr class="border" />
   </div>
 
-  <script src="/bower_components/angular/angular.js"></script>
-  <script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+  <script src="/lib/angular.js"></script>
+  <script src="/lib/ui-bootstrap-tpls.js"></script>
   <script type="text/javascript" src="/javascripts/app.js"></script>
   <script type="text/javascript" src="/javascripts/services.js"></script>
+  
 </body>
 </html>

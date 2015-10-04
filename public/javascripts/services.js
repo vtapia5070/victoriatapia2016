@@ -1,28 +1,5 @@
 angular.module('post.services', [])
 
-// .service('modalService', ['$modal', function ($modal) {
-//   function ($modal) {
-//     var modalDefaults = {
-//       backdrop: true,
-//       keyboard: true,
-//       backdropClick: true,
-//       templateUrl: '/templates/emailForm.html',
-//       controller: function modalCtrl ($scope, $modalInstance) {
-//         $scope.submit = function () {
-          
-//         }
-//       } 
-//     };
-//     var modalOptions = {
-//       animations: true,
-//       closeButtonText: 'Cancel',
-//       actionButtonText: 'OK',
-//       headerText: 'Proceed?',
-//       bodyText: 'Perform this action?'
-//     };
-//   }
-// }])
-
 .service('handleRequest', ['$http', function ($http) {
   this.getPost = function () {
     console.log("get request in process!");
