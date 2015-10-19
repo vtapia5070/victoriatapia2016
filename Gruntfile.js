@@ -35,7 +35,7 @@ module.exports = function(grunt) {
       dist: {
         src: [
           'public/stylesheets/*.css',
-          ''
+          'bootstrap.css'
         ], 
         dest:'public/dist/cssmin.css'
       }
@@ -51,8 +51,6 @@ module.exports = function(grunt) {
     }
   });
 
-  // Don't worry about this one - it just works. You'll see when you run `grunt`.
-  grunt.loadNpmTasks('grunt-notify');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
@@ -64,36 +62,34 @@ module.exports = function(grunt) {
   // Main grunt tasks
   ////////////////////////////////////////////////////
 
-  grunt.registerTask('server-dev', function (target) {
-    var nodemon = grunt.util.spawn({
-      cmd: 'grunt',
-      grunt: true,
-      args: 'nodemon'
-    });
-    nodemon.stdout.pipe(process.stdout);
-    nodemon.stderr.pipe(process.stderr);
+  // grunt.registerTask('server-dev', function (target) {
+  //   var nodemon = grunt.util.spawn({
+  //     cmd: 'grunt',
+  //     grunt: true,
+  //     args: 'nodemon'
+  //   });
+  //   nodemon.stdout.pipe(process.stdout);
+  //   nodemon.stderr.pipe(process.stderr);
 
-    grunt.task.run([ 'watch' ]);
-  });
+  // });
 
   grunt.registerTask('build', ['concat', 'uglify', 'cssmin']);
 
-  grunt.registerTask('upload', function(n) {
-    if(grunt.option('prod')) {
-      grunt.task.run([ 'shell:prodServer' ]);
-    } else {
-      grunt.task.run([ 'server-dev' ]);
-    }
-  });
+  // grunt.registerTask('upload', function(n) {
+  //   if(grunt.option('prod')) {
+  //     grunt.task.run([ 'shell:prodServer' ]);
+  //   } else {
+  //     grunt.task.run([ 'server-dev' ]);
+  //   }
+  // });
 
-  grunt.registerTask('default', function() {
-    grunt.task.run(["watch"]);
-  });
+  // grunt.registerTask('default', function() {
+  //   grunt.task.run(["watch"]);
+  // });
 
-  grunt.registerTask('deploy', [
-    'test',
-    'build',
-    'upload'
-    ]);
+  // grunt.registerTask('deploy', [
+  //   'build',
+  //   'upload'
+  //   ]);
 
 };

@@ -17,17 +17,8 @@ body {
   margin-right: 10%;
 }
 
-.border {
-  /*background: */
-  margin: 20px 0;
-  height: 1px;
-  border: 0;
-  background: black;
-  background: -webkit-gradient(linear, 0 0, 100% 0, from(#dfdfc2), to(#dfdfc2), color-stop(50%, #6f6f61));
-}
-
 .avatar-box {
-  margin: 10% 10% 20% 15%;
+  margin: 15% 15% 20% 20%;
   height: auto;
   width: auto;
   /*height: 20%;
@@ -63,6 +54,15 @@ p.name {
 .icons {
   padding: 5%;
   text-align: center;
+}
+
+.border {
+  /*background: */
+  margin: 20px 0;
+  height: 1px;
+  border: 0;
+  background: black;
+  background: -webkit-gradient(linear, 0 0, 100% 0, from(#dfdfc2), to(#dfdfc2), color-stop(50%, #6f6f61));
 }
 
 .icons a{
@@ -114,3 +114,14 @@ textarea {
 }
 
 
+/*.alert {
+  background-color: #90C5C5;
+  opacity: 0.7;
+  left: 0;
+  position: fixed;
+  right: 0;
+  width: 90%;
+  height: 10%;
+  z-index: 1000;
+  margin: 0 auto;
+}*/

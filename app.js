@@ -1,5 +1,4 @@
 var express = require('express'),
-session = require('express-session'),
 path = require('path'),
 favicon = require('serve-favicon'),
 logger = require('morgan'),
@@ -8,9 +7,7 @@ bodyParser = require('body-parser'),
 routes = require('./routes/index'),
 users = require('./routes/users'),
 config = require('./config.js'),
-//GoogleStrategy = require('passport-google-oauth').OAuth2Strategy,
-//passport = require('passport'),
-//mailer = require('./routes/index.js'),
+
 app = express();
 
 // view engine setup

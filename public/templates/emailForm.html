@@ -1,6 +1,6 @@
 <div class="modal-header">Email me!</div>
-<div class="modal-body">
-    <form ng-submit="submitForm()" name="emailForm" >
+    <!-- <form ng-submit="submitForm()" name="emailForm" > -->
+      <div class="modal-body">
         <input type="text" name="name" placeholder="name" ng-model="info.name" required ng-minlength="2"/>
         <p ng-show="emailForm.name.$invalid && !emailForm.name.$pristine">Your name is required.</p>
         <input type="email" name="email" placeholder="email" ng-model="info.email" required />
@@ -10,8 +10,8 @@
       </div>
       <div class="modal-footer">
         <button class="btn" ng-click="cancel()">Cancel</button>
-        <button class="btn" ng-disabled="emailForm.$invalid && emailForm.$dirty &&!emailForm.$pristine" type="submit" ng-click="ok()">Send</button>
+        <button class="btn" ng-disabled="emailForm.$invalid && emailForm.$dirty &&!emailForm.$pristine" type="submit" ng-click="ok()">send</button>
       </div> 
-    </form>
+   <!--  </form> -->
   </div>
 </div>
