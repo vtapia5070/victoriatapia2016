@@ -6,7 +6,6 @@ cookieParser = require('cookie-parser'),
 bodyParser = require('body-parser'),
 routes = require('./routes/index'),
 users = require('./routes/users'),
-config = require('./config.js'),
 
 app = express();
 

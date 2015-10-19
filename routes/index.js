@@ -1,6 +1,5 @@
 var express = require('express'),
 router = express.Router(),
-config = require('../config.js'),
 http = require('http'),
 queryString = require('querystring'),
 Firebase = require("firebase");
