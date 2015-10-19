@@ -3,7 +3,7 @@ angular.module('blog.services', [])
 .service('handleRequest', ['$http', function ($http) {
   this.getPost = function () {
     console.log("get request in process!");
-    $http.get('/')
+    $http.get('/home')
       .then(function (data) {
         console.log("data is", data);
       }, function (err) {
