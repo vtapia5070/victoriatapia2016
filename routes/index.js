@@ -42,25 +42,6 @@ router.post('/post', function(req, res, next) {
     }
   });
 });
-router.get('/home', function (req, res, next){
 
-}, function(error) {
-    if (error) {
-      console.log('Synchronization failed', error);
-    } else {
-      res.send("success");
-      console.log('Synchronization succeeded', error);
-    }
-  });
-router.get('/config.js', function (req, res, next){
-
-}, function(error) {
-    if (error) {
-      console.log(error);
-    } else {
-      res.send("success");
-      console.log( error);
-    }
-  });
 
 module.exports = router;

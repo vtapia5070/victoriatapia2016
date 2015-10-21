@@ -8,7 +8,7 @@ angular.module('blog', [
 
   .config(['$routeProvider', function($routeProvider) { 
     $routeProvider
-      .when('/home', {
+      .when('/', {
         templateUrl: '/templates/posts.html',
         controller: 'postController'
       })
@@ -17,7 +17,7 @@ angular.module('blog', [
         controller: 'projectController'
       })
       .otherwise({
-        redirectTo: '/home'
+        redirectTo: '/'
       });
   }]);
 //hello
