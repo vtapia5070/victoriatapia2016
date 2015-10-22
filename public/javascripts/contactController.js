@@ -5,11 +5,9 @@ angular.module("blog.contact", ['blog.services', 'ui.bootstrap'])
     $scope.bio = false;
     $scope.animationsEnabled = true;
     $scope.submitted = false;
-    $scope.status = true;
+    $scope.status = '';
     $scope.info = {};
-    $scope.closeAlert = function(index) {
-      $scope.alerts.splice(index, 1);
-    };
+
     $scope.showForm = function (size) {
       $scope.submitted = false;
       var modalInstance = $modal.open({

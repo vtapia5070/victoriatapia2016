@@ -29,17 +29,16 @@
       <a class="i2" href="https://twitter.com/vee_tapia"><img src="/images/twitter.png" height="23" width="23"/></a>
     </div>
     <br>
-    <div ng-if="submitted" class="alert alert-success fade in">
-      <div ng-if="status">
-        <p class="close" data-dismiss="alert" aria-label="close">&times;</p>
-        <strong>Message Sent!</strong>
-      </div>
-      <div ng-if="!status">
-        <p class="close" data-dismiss="alert" aria-label="close">&times;</p>
-        <strong>There was an error!</strong> I have been notified, but please try again later, or contact my email directly at: tapia.victoria5070@gmail.com
-      </div>
+
+    <div ng-if="submitted">
+      <alert ng-show="!status" type="danger" class="alert" close="bCloseAlert=1" ng-hide="bCloseAlert">
+      <strong>There was an error!</strong> I have been notified, but please try again later, or contact my email directly at: tapia.victoria5070@gmail.com
+      </alert>
+      <alert ng-show="status" class="alert" type="danger" close="bCloseAlert=1" ng-hide="bCloseAlert"> <strong>Message Sent!</strong></alert>
     </div>
+
   </div>
+
   <div class="static" id="right" ng-controller="postController">
     <div ng-view></div>
   </div>

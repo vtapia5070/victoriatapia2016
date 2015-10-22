@@ -35659,11 +35659,9 @@ angular.module("blog.contact", ['blog.services', 'ui.bootstrap'])
     $scope.bio = false;
     $scope.animationsEnabled = true;
     $scope.submitted = false;
-    $scope.status = true;
+    $scope.status = '';
     $scope.info = {};
-    $scope.closeAlert = function(index) {
-      $scope.alerts.splice(index, 1);
-    };
+
     $scope.showForm = function (size) {
       $scope.submitted = false;
       var modalInstance = $modal.open({
@@ -35718,49 +35716,7 @@ angular.module("blog.posts", ['blog.services', 'ui.bootstrap'])
       readOnly: true
     };
     $scope.init();
-  }])
-
-  // .controller('contactController', ['$scope', 'handleRequest', '$modal', '$log', function ($scope, handleRequest, $modal, $log) {
-  //   $scope.contact = false;
-  //   $scope.bio = false;
-  //   $scope.animationsEnabled = true;
-  //   $scope.submitted = false;
-  //   $scope.status = true;
-  //   $scope.info = {
-  //     name:'',
-  //     email: '',
-  //     text: ''
-  //   };
-  //   $scope.closeAlert = function(index) {
-  //     $scope.alerts.splice(index, 1);
-  //   };
-  //   $scope.showForm = function (size) {
-  //     $scope.submitted = false;
-  //     var modalInstance = $modal.open({
-  //       templateUrl: 'templates/emailForm.html',
-  //       scope: $scope,
-  //       size: size,
-  //       controller: ['$scope', '$modalInstance', function($scope, $modalInstance, handleRequest) {
-  //         $scope.ok = function () { 
-  //           $modalInstance.close($scope.info);
-  //         };
-  //         $scope.cancel = function () { $modalInstance.dismiss('cancel'); };
-  //       }],
-  //     });
-  //     modalInstance.result.then(function (user) {
-  //       $scope.user = user;
-  //       console.log("user is ", user);
-  //       handleRequest.sendPost($scope.info, function (response) {
-  //         console.log("response is", response);
-  //         $scope.status = response;
-  //         $scope.submitted = true;
-  //       });
-  //       },
-  //     function () {
-  //       $log.info('Modal dismissed at: ' + new Date());
-  //     });
-  //   };
-  // }]);
+  }]);
 
 angular.module("blog.projects", [])
 
