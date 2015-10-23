@@ -2,7 +2,7 @@ angular.module("blog.posts", ['blog.services', 'ui.bootstrap'])
 
   .controller('postController', ['$scope', 'handleRequest', function ($scope, handleRequest) {
     $scope.init = function () {
-      console.log("Post controller initialized");
+      // console.log("Post controller initialized");
       handleRequest.getPost();
     };
     $scope.templates = [{

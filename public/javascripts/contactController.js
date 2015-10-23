@@ -26,7 +26,7 @@ angular.module("blog.contact", ['blog.services', 'ui.bootstrap'])
         $scope.info.email = info.email;
         $scope.info.text = info.text;
         handleRequest.sendPost($scope.info, function (response) {
-          console.log("response is", response);
+          // console.log("response is", response);
           $scope.status = response;
           $scope.submitted = true;
         });

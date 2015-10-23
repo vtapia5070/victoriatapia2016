@@ -35680,7 +35680,7 @@ angular.module("blog.contact", ['blog.services', 'ui.bootstrap'])
         $scope.info.email = info.email;
         $scope.info.text = info.text;
         handleRequest.sendPost($scope.info, function (response) {
-          console.log("response is", response);
+          // console.log("response is", response);
           $scope.status = response;
           $scope.submitted = true;
         });
@@ -35695,7 +35695,7 @@ angular.module("blog.posts", ['blog.services', 'ui.bootstrap'])
 
   .controller('postController', ['$scope', 'handleRequest', function ($scope, handleRequest) {
     $scope.init = function () {
-      console.log("Post controller initialized");
+      // console.log("Post controller initialized");
       handleRequest.getPost();
     };
     $scope.templates = [{
@@ -35727,12 +35727,12 @@ angular.module('blog.services', [])
 
 .service('handleRequest', ['$http', function ($http) {
   this.getPost = function () {
-    console.log("get request in process!");
+    // console.log("get request in process!");
     $http.get('/')
       .then(function (data) {
-        console.log("data is", data);
+        // console.log("data is", data);
       }, function (err) {
-        console.log("error is", err);
+        // console.log("error is", err);
     });
   };
 
@@ -35740,10 +35740,10 @@ angular.module('blog.services', [])
     console.log("inside sending post to server");
     $http.post('/post', data)
     .then(function (result) {
-      console.log("response is ", result);
+      // console.log("response is ", result);
       callback(true);
     }, function (err) {
-      console.log("err from postRequest is", err);
+      // console.log("err from postRequest is", err);
       callback(false);
     });
   };
