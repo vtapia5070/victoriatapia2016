@@ -35698,9 +35698,14 @@ angular.module("blog.posts", ['blog.services', 'ui.bootstrap'])
       // console.log("Post controller initialized");
       handleRequest.getPost();
     };
-    $scope.templates = [{
+    $scope.templates = [
+      {
+        name: 'post3',
+        url: 'templates/_posts/post3CloudComputing.html'
+      },
+      {
         name: 'post2',
-        url: '/templates/_posts/modalsPost.html'
+        url: '/templates/_posts/post2Modals.html'
       },
       {
         name: 'post1',
