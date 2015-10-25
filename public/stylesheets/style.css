@@ -113,7 +113,8 @@ textarea {
   font-size: 14px;
 }
 
-a {
-  position: fixed;
+.icons {
+  /*position: fixed;*/
   overflow: auto;
+  /*padding: 10px;*/
 }
