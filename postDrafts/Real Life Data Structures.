@@ -13,7 +13,7 @@ I happened to be migrating data from an api to a neo4j database. This api held b
 
 Things to note:
 
-I'm using a constructor function to build this data structure and instantiation it in a pseudo classical pattern.
+I'm using a constructor function to build this data structure and instantiate it in a pseudo classical pattern.
   To instantiate a data structure, I simply have to use the ```new``` keyword. The new keyword acts automagical and inserts a newly created object inherating it's constructor's protoype, and returns it.
   ```
   var LinkedList = function () {
@@ -27,5 +27,11 @@ I'm using a constructor function to build this data structure and instantiation 
   ``` 
   var data = new LinkedList();
   ```
+I've created three methods for my data structure as needed to migrate data. Other methods such as: add, remove, find, display, findPrevious, ect., may be used in the some general Javascript tutorials. I taylored these methods to fit my need, however here are some components you may want to think about to decide how to manuipulate your own linked list.
+  - Can you find the head and tail of the linked list?
+    - If so, you can easily delete or add to the linked list.
+  - Can you iterate over the linked list?
+    - I find recursive functions to work best, once understand the concept of a linked list and how to iterate over each list, you can search, display, or simply perform higher ordered functions to get the job done.
+
 
 

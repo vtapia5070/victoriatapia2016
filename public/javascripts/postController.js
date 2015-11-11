@@ -7,6 +7,10 @@ angular.module("blog.posts", ['blog.services', 'ui.bootstrap'])
     };
     $scope.templates = [
       {
+        name: 'post4',
+        url: 'templates/_posts/post4linkedList.html'
+      },
+      {
         name: 'post3',
         url: 'templates/_posts/post3CloudComputing.html'
       },
