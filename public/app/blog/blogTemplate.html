@@ -7,7 +7,7 @@
     <hr class="border" />
     <p class="contact" ng-click="bio ? bio = false : bio = true">About Me</p>
     <div ng-if="bio">
-      <p> Javascript Software Engineer </p>
+      <p> Software Engineer </p>
       <p> Sunnyvale, CA </p>
     </div>
     <hr class="border" />
@@ -31,8 +31,13 @@
 </div>
 
 <div class="right">
-  <div>inside right!!</div>
-  <div class="static" id="right" ng-controller="postController">
-    <div ng-include="templates/posts/posts.html"></div>
+  <div class="posts" ng-controller="postController">
+    <div ng-controller="postController">
+      <hr class="border" />
+      <div ng-repeat="posts in templates">
+        <div ng-include="posts.url"></div>
+      </div>
+      <hr class="border" />
+    </div>
   </div>
 </div>
