@@ -8,19 +8,19 @@ angular.module("myApp.blogPosts", ['ui.bootstrap'])
     $scope.templates = [
       {
         name: 'post4',
-        url: '/app/blog/templates/posts/post4linkedList.html'
+        url: '/blog/templates/posts/post4linkedList.html'
       },
       {
         name: 'post3',
-        url: '/app/blog/templates/posts/post3CloudComputing.html'
+        url: '/blog/templates/posts/post3CloudComputing.html'
       },
       {
         name: 'post2',
-        url: '/app/blog/templates/posts/post2Modals.html'
+        url: '/blog/templates/posts/post2Modals.html'
       },
       {
         name: 'post1',
-        url: '/app/blog/templates/posts/post1.html'
+        url: '/blog/templates/posts/post1.html'
       }];
     $scope.init();
   }]);

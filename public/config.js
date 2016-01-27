@@ -9,11 +9,11 @@ angular.module('myApp', [
   .config(['$routeProvider', function($routeProvider) { 
     $routeProvider
       .when('/', {
-        templateUrl: '/app/portfolio/portfolio.html',
+        templateUrl: '/portfolio/portfolio.html',
         controller: 'portfolioController'
       })
       .when('/blog', {
-        templateUrl: '/app/blog/blogTemplate.html',
+        templateUrl: '/blog/blogTemplate.html',
         controller: 'contactController'
       })
       .when('/projects', {
