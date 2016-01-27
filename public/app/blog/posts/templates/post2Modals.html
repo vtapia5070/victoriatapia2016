@@ -1,0 +1,54 @@
+<div class="date">
+  <h3 class="time">October 18, 2015</h3>
+</div>
+<div class="post">
+  <h4>Modals, Modals, and More Modals!</h4>
+  <br>
+  <div>
+    <p>Bootstrap modals are very simple to use, but how do you incorporate AngularJS functionality? <em>UI-bootstrap is the way to go.</em></p>
+    <h5><strong>Installation:</strong></h5>
+    <div>
+      <code>bower install angular</code><br>
+      <code>bower install ui-bootstrap</code><br>
+      <code>bower install bootstrap.css</code>
+    </div>
+  </div>
+  <br>
+  <h5><strong>Demo</strong></h5>
+  <iframe style="width: 100%; height: 400px" src="http://embed.plnkr.co/e4cNNfcYejOEI3Mf4ITB" frameborder="0" allowfullscren="allowfullscren">Code</iframe>
+
+  <h5><strong>Things to Note:</strong></h5><br>
+  <strong>Order is EVERYTHING.</strong>
+  <p><em>Well, maybe you can get away with unordered script tags and links, but reasons can convey otherwise.</em>
+  </p>
+  <ul>
+    <li>Reason 1: It is said to be best practice to place script tags at the bottom of the body.</li>
+  </ul>
+  <p><em>&nbsp; &nbsp; &nbsp; &nbsp; With multiple calls to other files, you don&#39;t want to keep your user waiting. Doing this allows the DOM to load syncrously, (top to bottom) with the CSS and HTML loading first, and functionality last. By the time all files are loaded, the user can interact with the web app as needed.</em></p>
+  <ul>
+    <li>Reason 2: Long hours of debugging only to find the order of script tabs is necessary.&nbsp;</li>
+  </ul>
+  <div>
+    <em>&nbsp; &nbsp; &nbsp; &nbsp; The link reference to the bootstrap.css is a necessity to make the Modal apparent. However, if placed after the static CSS reference for the html, the html styling will be cascaded over (overwritten, and forever corrupted). True story: After I contently styled my blog, it was almost unreadable when placed before the bootstrap.css link tag.</em></div>
+  <div>&nbsp;</div>
+  <div>
+    <strong>My script tag that sources ui-bootstrap uses &quot;ui-bootstrap-tpls.js&quot;. </strong></div>
+  <div>
+    <em>According to some stackoverflow searches, tpls is for basic modals, using other ui-bootstrap.js require custom modals, which I won&#39;t go into.</em></div>
+  <div>&nbsp;</div>
+  <div>
+    <strong>Using a template in script tags on the main HTML page va using an template fron another HTML file.</strong></div>
+  <div>
+    <em>If you want to modularize your template in a different file, copy everything inside the script tag and paste in your template HTML file. The original HTML file should only require the button or tag that opens the modal when clicked.</em></div>
+  <div>
+    <em>In the myController function, change the modal options inside <code>modal.open({})</code>. The templateUrl should be set to the path of the new modal template.</em></div>
+  <div>&nbsp;</div>
+  <div>
+    <strong>Modals can incorporate services and factories as the typical controller.</strong></div>
+  <div>&nbsp;</div>
+  <div>
+    <strong>Modals can update the HTML environment based on the modal input.</strong></div>
+  <div>&nbsp;</div>
+  <div>
+    <strong>Modals will be the best thing that has ever happened to your Angular application.</strong> (Says me)</div>
+</div>

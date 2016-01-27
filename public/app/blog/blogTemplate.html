@@ -1,0 +1,36 @@
+<div ng-controller="contactController">
+  <div class="static" id="left" ng-controller="contactController">
+    <div class="avatar-box">
+      <img id="avatar" src="/images/avatar.png" />
+    </div>
+    <p class="name"> Victoria Tapia </p>
+    <hr class="border" />
+    <p class="contact" ng-click="bio ? bio = false : bio = true">About Me</p>
+    <div ng-if="bio">
+      <p> Javascript Software Engineer </p>
+      <p> Sunnyvale, CA </p>
+    </div>
+    <hr class="border" />
+    <p class="contact" data-ng-click="showForm('lg')">Contact</p>
+    <hr class="border" />
+    <div class="icons">
+      <a class="i1" target="_blank" href="http://github.com/vtapia5070"><img src="/images/github.png" height="23" width="23"/></a>
+      <a class="i1" target="_blank" href="http://www.linkedin.com/in/victoriatapia1"><img src="/images/linkedin.png" height="23" width="23"/></a>
+      <a class="i2" target="_blank" href="http://twitter.com/vee_tapia"><img src="/images/twitter.png" height="23" width="23"/></a>
+    </div>
+    <br>
+
+    <div ng-if="submitted">
+      <alert ng-if="!status" type="danger" class="alert" close="bCloseAlert=1" ng-hide="bCloseAlert">
+      <strong>There was an error!</strong> I have been notified, but please try again later, or contact my email directly at: tapia.victoria5070@gmail.com
+      </alert>
+      <alert ng-if="status" class="alert" type="danger" close="bCloseAlert=1" ng-hide="bCloseAlert"> <strong>Message Sent!</strong></alert>
+    </div>
+
+  </div>
+
+  <div class="static" id="right" ng-controller="postController">
+    <div ng-include="./posts/templates/posts.html"></div>
+  </div>
+
+<!-- </div>

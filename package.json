@@ -12,30 +12,26 @@
     "express": "~4.13.1",
     "firebase": "^2.3.1",
     "grunt": "^0.4.5",
-    "jade": "~1.11.0",
-    "morgan": "~1.6.1",
     "passport": "^0.3.0",
-    "request": "^2.65.0",
-    "serve-favicon": "~2.3.0"
+    "request": "^2.65.0"
   },
   "description": "blog",
   "main": "index.js",
   "devDependencies": {
     "bower": "^1.5.3",
     "grunt": "~0.4.5",
+    "grunt-contrib-concat": "^0.3.0",
+    "grunt-contrib-cssmin": "^0.9.0",
     "grunt-contrib-jshint": "~0.10.0",
     "grunt-contrib-nodeunit": "~0.4.1",
     "grunt-contrib-uglify": "~0.5.0",
-    "grunt-contrib-cssmin": "^0.9.0",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-contrib-concat": "^0.3.0"
+    "grunt-contrib-watch": "^0.6.1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/vtapia5070/victoriatapia.git"
   },
   "author": "Victoria Tapia",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/vtapia5070/victoriatapia/issues"
   },

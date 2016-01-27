@@ -1,0 +1,80 @@
+<div class="date">
+  <h3 class="time">November 7, 2015</h3>
+</div>
+<div class="post">
+  <h4>Real Life Data Structures<br><em>Linked List and Pseudoclassical Instantiation.</em></h4>
+  <br>
+  <div><em>We've all heard metaphors of deli lines and the stacking of papers (that is if you've been introduced to stacks and queues), but how often do you actually find use for datastructures? For the first time it has occurred to me that I desperatly need data structures in my life, and I don't know what I would do with out them. It was also the first time I realized, even though they were very well practiced, it was very painful to openly apply them as possible solutions, given real life limitations.</em></div>
+  <h5><strong>My experience:</strong></h5>
+  <div>
+    I happened to be migrating data from an api to a neo4j database. This api held big data (3,000 items with multiple properties for each data object). Because of the large amount od data, the api endpoints were limited to 25 items each, including a next property that held the value for the following 25 drinks. After repetedly walking through each request to each endpoint, I realized I was going through the process of a linked list. Thus, my life has saved a days work of boring tedious repetition.
+  </div>
+  <br>
+  <h5><strong><em>"If you're completing a task that requires manual repetition and time, there probably is another approach."</em></strong><h5>
+  <br>
+<div><pre class="language-javascript">
+<code class="language-javascript">var LinkedList = function () {
+  this.head = null;
+  this.tail = null;
+};
+
+LinkedList.prototype.addToTail = function (val) {
+  if (this.head === null) {
+    this.head = createNode(val);
+    this.head.next = this.tail;
+    this.tail = this.head;
+  } else {
+    this.tail.next = createNode(val);
+    this.tail = this.tail.next;
+  }
+};
+
+LinkedList.prototype.forEach = function (cb, node) {
+  node = node || this.head;
+  for (var i = 0; i < node.value.length; i++) {
+    cb(node.value[i]);
+  }
+  if (node.next) {
+    LinkedList.prototype.forEach(cb, node.next);
+  } else {
+    return;
+  }
+};
+
+LinkedList.prototype.removeHead = function () {
+  var next = this.head.next;
+  delete this.head;
+  this.head = next;
+};
+
+var createNode = function (val) {
+  return {
+    value: val,
+    next: null
+  };
+};</code></pre></div>
+
+  <h5><strong>Things to note:</strong></h5>
+  <p>I'm using a constructor function to build this data structure and instantiate it in a pseudo classical pattern.</p>
+  <p><em>&nbsp; &nbsp; &nbsp; &nbsp; To instantiate a data structure, I simply have to use the <code>new</code> keyword. The new keyword acts automagical and inserts a newly created object inherating it's constructor's protoype, and returns it.</em></p>
+   <div>
+    <div class="language-javascript"><pre><code>var LinkedList = function () {
+      //var this = Object.create(LinkedList.prototype);
+      this.head = null;
+      this.tail = null;
+      //return this;
+    };</code></pre></div>
+    I instantiated the above LinkedList constructor as follows:
+    <code>var data = new LinkedList();</code>
+  </div>
+  <p>I've created three methods for my data structure as needed to migrate data. Other methods such as: add, remove, find, display, findPrevious, ect., may be used in the some general Javascript tutorials. I taylored these methods to fit my need, however here are some components you may want to think about to decide how to manuipulate your own linked list.</p>
+  <ul>
+    <li>Can you find the head and tail of the linked list? 
+      <ul><li>If so, you can easily delete or add to the linked list.</li></ul>
+    </li>
+    <li>Can you iterate over the linked list?
+      <ul><li>I find recursive functions to work best, once understand the concept of a linked list and how to iterate over each list, you can search, display, or simply perform higher ordered functions to get the job done.</li></ul>
+    </li>
+  </ul>
+</div>
+<hr class="border" />
