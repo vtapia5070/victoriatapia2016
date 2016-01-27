@@ -1,4 +1,4 @@
-<div ng-controller="contactController">
+<div class="nav">
   <div class="static" id="left" ng-controller="contactController">
     <div class="avatar-box">
       <img id="avatar" src="/images/avatar.png" />
@@ -28,9 +28,11 @@
     </div>
 
   </div>
+</div>
 
+<div class="right">
+  <div>inside right!!</div>
   <div class="static" id="right" ng-controller="postController">
-    <div ng-include="./posts/templates/posts.html"></div>
+    <div ng-include="templates/posts/posts.html"></div>
   </div>
-
-<!-- </div>
+</div>

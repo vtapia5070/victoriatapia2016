@@ -1,4 +1,4 @@
-angular.module("blog.contact", ['blog.services', 'ui.bootstrap'])
+angular.module("myApp.blogContact", ['myApp.blogServices', 'ui.bootstrap'])
 
 .controller('contactController', ['$scope', 'handleRequest', '$modal', '$log', function ($scope, handleRequest, $modal, $log) {
     $scope.contact = false;

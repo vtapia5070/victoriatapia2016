@@ -1,16 +1,20 @@
-angular.module('blog', [
-    'blog.posts',
-    'blog.contact',
-    'blog.projects',
-    'blog.services',
+angular.module('myApp', [
+    'myApp.blogPosts',
+    'myApp.blogContact',
+    'myApp.blogServices',
+    'myApp.portfolio',
     'ngRoute'
   ])
 
   .config(['$routeProvider', function($routeProvider) { 
     $routeProvider
       .when('/', {
-        templateUrl: '/templates/posts.html',
-        controller: 'postController'
+        templateUrl: '/app/portfolio/portfolio.html',
+        controller: 'portfolioController'
+      })
+      .when('/blog', {
+        templateUrl: '/app/blog/blogTemplate.html',
+        controller: 'contactController'
       })
       .when('/projects', {
         templateUrl: '/templates/projects.html',
@@ -20,4 +24,3 @@ angular.module('blog', [
         redirectTo: '/'
       });
   }]);
-//hello

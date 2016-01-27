@@ -5,10 +5,14 @@
   <meta name="HandheldFriendly" content="true"></meta>
   <title>My Blog</title>
   <link rel="stylesheet" type="text/css" href="lib/bootstrap.css" />
+  <!--
   <link rel="stylesheet" type="text/css" href="dist/cssmin.css" />
-  <link rel="stylesheet" href="lib/prism.css" />
+  -->
+  <link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
+
 </head>
-<body ng-app="blog">
+<body ng-app="myApp">
+<!--
   <div class="static" id="left" ng-controller="contactController">
     <div class="avatar-box">
       <img id="avatar" src="/images/avatar.png" />
@@ -40,18 +44,25 @@
   </div>
 
   <div class="static" id="right" ng-controller="postController">
-    <div ng-view></div>
+    <div ng-include=""></div>
   </div>
+  -->
+
+  <ng-view></ng-view>
 
   <script src="/lib/prism.js"></script>
   <script src="/lib/angular.js"></script>
   <script src="/lib/angular-route.js"></script>
   <script src="/lib/ui-bootstrap-tpls.js"></script>
+  <!--
   <script type="text/javascript" src="/config.js"></script>
   <script type="text/javascript" src="/dist/uglify.js"></script>
-  <!--<script type="text/javascript" src="/javascripts/postController.js"></script>
-  <script type="text/javascript" src="/javascripts/projectController.js"></script>
-  <script type="text/javascript" src="/javascripts/contactController.js"></script>-->
+  -->
+  <script type="text/javascript" src="/app/blog/controllers/postController.js"></script>
+  <script type="text/javascript" src="/app/blog/controllers/contactController.js"></script>
+  <script type="text/javascript" src="/app/blog/services.js"></script>
+  <script type="text/javascript" src="/config.js"></script>
+  <script type="text/javascript" src="/app/portfolio/controller.js"></script>
   
 </body>
 </html>

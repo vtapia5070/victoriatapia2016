@@ -1,4 +1,4 @@
-angular.module('blog.services', [])
+angular.module('myApp.blogServices', [])
 
 .service('handleRequest', ['$http', function ($http) {
   this.getPost = function () {
