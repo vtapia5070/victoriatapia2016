@@ -48,6 +48,7 @@ nav {
   height: 40px;
   color: #fbf1e3;
   background: rgba(0,0,0,1.0);
+  z-index: 1;
 }
 
 .social-icons a {
@@ -56,19 +57,55 @@ nav {
 
 .social-icons {
   padding: 5px;
+  margin-left: 2%;
 }
 
 .portfolio-container {
-  background-color: #faf1e3;
-  border: solid;
+  font-family: 'Karla', sans-serif;
 }
 
-.portfolio-body {
-  border: solid;
+div.body-header {
+  color: #C2185B;
   width: 50%;
+  /*border: 10px solid;*/
+  border-top: solid #fff .5px;
+  border-bottom: solid #B6B6B6 5px;
+  /*outline-offset: -9px;*/
+  /*border-left: solid 5px;*/
+  margin: 4% 0 1% 10%;
+  padding-left: 1%;
+  /*text-align: center;*/
+  /*margin-bottom: 5%;*/
+  /*margin: auto 0;*/
+}
+
+div.body-body {
+  /*border: 2px solid;*/
+  width: 80%;
   margin: 0 auto;
+}
+
+div.img-left {
+  float: left;
+  margin-left: 7%;
+  margin-top: 4%;
+}
+
+div.description-right {
+  color: #607D8B;
+  /*border: 2px solid;*/
+  float: right;
+  width: 50%;
+  margin-right: 20%;
+}
+
+/*.portfolio-body {
+  height: 100vh;
+  width: 80%;
+  margin: 0;
   background-color: #fff;
 }
+*/
 
 .nav {
   width: 100%;
