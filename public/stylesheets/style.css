@@ -5,7 +5,7 @@
 /*Portfolio img*/
 #header-container {
   position: relative;
-  background: url("../imagescopy/laptop.jpg") no-repeat center top fixed;
+  background: url("../images/laptop.jpg") no-repeat center top fixed;
   height: 85vh;
   top: 0;
   -webkit-background-size: cover;
@@ -172,10 +172,10 @@ div.description-bottom {
   border-radius: 50%;
 }
 
-#left p {
- text-align: center;
- font-size: 110%;
- color: #6f6f61;
+#left p,  .contact a {
+  text-align: center;
+  font-size: 110%;
+  color: #6f6f61;
 }
 
 p.name {
@@ -188,7 +188,6 @@ p.name {
 }
 
 .border {
-  /*background: */
   margin: 20px 0;
   height: 1px;
   border: 0;
