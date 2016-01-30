@@ -42,7 +42,7 @@ div.title {
 }
 
 /*portfolio nav bar*/
-nav {
+nav.main-nav {
   position: fixed;
   width: 100%;
   height: 40px;
@@ -60,23 +60,32 @@ nav {
   margin-left: 2%;
 }
 
+/*Portfolio body*/
 .portfolio-container {
   font-family: 'Karla', sans-serif;
 }
 
-div.body-header {
+.body-header {
+  /*border: solid;*/
+  font-size: 34px;
   color: #C2185B;
-  width: 50%;
+  width: 60%;
   /*border: 10px solid;*/
   border-top: solid #fff .5px;
   border-bottom: solid #B6B6B6 5px;
   /*outline-offset: -9px;*/
   /*border-left: solid 5px;*/
-  margin: 4% 0 1% 10%;
-  padding-left: 1%;
+  margin: 2% 0 3% 4%;
+  /*padding-left: 1%;*/
   /*text-align: center;*/
   /*margin-bottom: 5%;*/
   /*margin: auto 0;*/
+}
+
+.body-header li{
+  padding-right: 10%;
+  width: 100%;
+  display: inline;
 }
 
 div.body-body {
@@ -87,8 +96,8 @@ div.body-body {
 
 div.img-left {
   float: left;
-  margin-left: 7%;
-  margin-top: 4%;
+  margin-left: 8%;
+  margin-top: 2%;
 }
 
 div.description-right {
@@ -97,6 +106,19 @@ div.description-right {
   float: right;
   width: 50%;
   margin-right: 20%;
+  font-size: 15px;
+  /*padding-bottom: 10%;*/
+}
+
+div.description-bottom {
+  clear: both;
+  font-size: 15px;
+  /*border: solid;*/
+  color: #607D8B;
+  width: 70%;
+  margin-left: 8%;
+  margin-bottom: 10%;
+  /*padding: 1%;*/
 }
 
 /*.portfolio-body {
