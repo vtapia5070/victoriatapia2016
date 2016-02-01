@@ -2,7 +2,7 @@ angular.module('myApp', [
     'myApp.blogPosts',
     'myApp.blogContact',
     'myApp.blogServices',
-    'myApp.portfolio',
+    'myApp.projects',
     'ngRoute'
   ])
 
@@ -17,7 +17,7 @@ angular.module('myApp', [
         controller: 'contactController'
       })
       .when('/projects', {
-        templateUrl: '/templates/projects.html',
+        templateUrl: '/projects/projects.html',
         controller: 'projectController'
       })
       .otherwise({

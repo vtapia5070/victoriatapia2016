@@ -1,3 +1,8 @@
+a {
+  /*color: #C2185B;*/
+  color: #d45d8c;
+}
+
 /************
 * Portfolio *
 ************/
@@ -13,6 +18,7 @@
   -o-background-size: cover;
   background-size: cover;
 }
+
 /*Portfolio title*/
 div.title-container {
   position: absolute;
@@ -66,30 +72,29 @@ nav.main-nav {
 }
 
 .body-header {
-  /*border: solid;*/
-  font-size: 34px;
-  color: #C2185B;
+  font-size: 30px;
+  font-weight: 200;
   width: 60%;
-  /*border: 10px solid;*/
+/*  color: #d45d8c; */
   border-top: solid #fff .5px;
   border-bottom: solid #B6B6B6 5px;
-  /*outline-offset: -9px;*/
-  /*border-left: solid 5px;*/
   margin: 2% 0 3% 4%;
-  /*padding-left: 1%;*/
-  /*text-align: center;*/
-  /*margin-bottom: 5%;*/
-  /*margin: auto 0;*/
 }
 
-.body-header li{
-  padding-right: 10%;
+.body-header li {
+  padding-right: 8%;
   width: 100%;
   display: inline;
 }
 
+.dark a {
+  color: #C2185B;
+  font-size: 34px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
 div.body-body {
-  /*border: 2px solid;*/
   width: 80%;
   margin: 0 auto;
 }
@@ -102,32 +107,43 @@ div.img-left {
 
 div.description-right {
   color: #607D8B;
-  /*border: 2px solid;*/
   float: right;
   width: 50%;
   margin-right: 20%;
   font-size: 15px;
-  /*padding-bottom: 10%;*/
 }
 
 div.description-bottom {
   clear: both;
   font-size: 15px;
-  /*border: solid;*/
   color: #607D8B;
   width: 70%;
   margin-left: 8%;
   margin-bottom: 10%;
-  /*padding: 1%;*/
 }
 
-/*.portfolio-body {
-  height: 100vh;
-  width: 80%;
-  margin: 0;
-  background-color: #fff;
+.projects li {
+  display: inline-block;
+  margin: 3%;
+  font-family: 'Karla', sans-serif;
+  /*color: #2A6496;*/
+  color: #607D8B;
+  font-size: 16px;
+  font-weight: 600;
+  /*font-style: italic;*/
+  /*display: inline;*/
+  /*border: solid;*/
+/*  width: 10%;*/
+  /*height: 25%;*/
 }
-*/
+
+.projects img {
+  margin-bottom: 5%;
+}
+.projects div {
+  text-align: center;
+  /*border: solid;*/
+}
 
 .nav {
   width: 100%;
