@@ -11,7 +11,7 @@ angular.module("myApp.blogContact", ['myApp.blogServices', 'ui.bootstrap'])
     $scope.showForm = function (size) {
       $scope.submitted = false;
       var modalInstance = $modal.open({
-        templateUrl: '/templates/emailForm.html',
+        templateUrl: '/blog/templates/emailForm.html',
         scope: $scope,
         size: size,
         controller: ['$scope', '$modalInstance', function($scope, $modalInstance, handleRequest) {
