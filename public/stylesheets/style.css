@@ -1,9 +1,12 @@
+html, body { width: 100%; height: 100%; overflow: scroll; }
+
+/*@-ms-viewport{ width: device-width; }*/
+
+/*overwrite bootstap-css anchor color*/
 a {
   /*color: #C2185B;*/
   color: #d45d8c;
 }
-
-@-ms-viewport{ width: device-width; }
 
 /************
 * Portfolio *
