@@ -1,5 +1,12 @@
-html, body { width: 100%; height: 100%; overflow: scroll; }
+html, body { 
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
 
+body {
+  display: flex;
+}
 /*@-ms-viewport{ width: device-width; }*/
 
 /*overwrite bootstap-css anchor color*/
@@ -162,10 +169,14 @@ div.description-bottom {
   /*border: solid;*/
 }
 
-.nav {
+.contact-av {
   width: 100%;
   height: 100%;
   font-family: "Trebuchet MS", Verdana, sans-serif;
+}
+
+#left .right {
+  flex: 1;
 }
 
 #left {
