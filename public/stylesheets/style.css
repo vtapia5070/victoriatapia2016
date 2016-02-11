@@ -3,6 +3,8 @@ a {
   color: #d45d8c;
 }
 
+@-ms-viewport{ width: device-width; }
+
 /************
 * Portfolio *
 ************/
