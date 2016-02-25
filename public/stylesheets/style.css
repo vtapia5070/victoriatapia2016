@@ -7,6 +7,7 @@ html, body {
 body {
   display: flex;
 }
+
 /*@-ms-viewport{ width: device-width; }*/
 
 /*overwrite bootstap-css anchor color*/
@@ -24,6 +25,7 @@ a {
   position: relative;
   background: url("../images/laptop.jpg") no-repeat center top fixed;
   height: 85vh;
+  width: 100vw;
   top: 0;
   -webkit-background-size: cover;
   -moz-background-size: cover;
